@@ -24,9 +24,16 @@
         <!-- Hibernate configuration properties END-->
 
         <mapping class="imeet.entity.EmployeeEntity"/>
+
         <mapping class="imeet.entity.pk.EmbeddableEntity"/>
         <mapping class="imeet.entity.pk.EmbeddableIdEntity"/>
         <mapping class="imeet.entity.pk.EmbeddedIdEntity"/>
+
+        <mapping class="imeet.entity.inheritence.singletable.PayableEntity"/>
+        <mapping class="imeet.entity.inheritence.singletable.EmployeeEntity"/>
+        <mapping class="imeet.entity.inheritence.singletable.InvoiceEntity"/>
+        <mapping class="imeet.entity.inheritence.singletable.HourlyEmployeeEntity"/>
+        <mapping class="imeet.entity.inheritence.singletable.SalariedEmployeeEntity"/>
 
     </session-factory>
 
