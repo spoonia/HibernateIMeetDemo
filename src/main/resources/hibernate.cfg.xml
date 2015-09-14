@@ -20,10 +20,13 @@
         <property name="format_sql">true</property>
         <property name="use_sql_comments">true</property>
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-        <property name="hbm2ddl.auto">create-drop</property>
+        <property name="hbm2ddl.auto">create</property>
         <!-- Hibernate configuration properties END-->
 
         <mapping class="imeet.entity.EmployeeEntity"/>
+        <mapping class="imeet.entity.pk.EmbeddableEntity"/>
+        <mapping class="imeet.entity.pk.EmbeddableIdEntity"/>
+        <mapping class="imeet.entity.pk.EmbeddedIdEntity"/>
 
     </session-factory>
 

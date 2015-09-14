@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PACKAGE)
-@Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"email"})})
+@Table(name = "employee")
 public class EmployeeEntity {
 
     @Id
