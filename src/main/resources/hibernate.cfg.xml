@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Hibernate JDBC Properties START -->
+        <property name="connection.url">jdbc:mysql://localhost:3306/HibernateIMeetDB</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">HibernateIMeetDB</property>
+        <property name="connection.password">HibernateIMeetDB</property>
+        <property name="connection.autocommit">true</property>
+        <property name="connection.pool_size">5</property>
+        <!-- Hibernate JDBC Properties END -->
+
+        <!-- Hibernate configuration properties START -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="use_sql_comments">true</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hbm2ddl.auto">create-drop</property>
+        <!-- Hibernate configuration properties END-->
+
+        <mapping class="imeet.entity.EmployeeEntity"/>
+
+    </session-factory>
+
+</hibernate-configuration>
