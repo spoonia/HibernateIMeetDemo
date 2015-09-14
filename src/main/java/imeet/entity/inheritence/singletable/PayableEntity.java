@@ -10,9 +10,7 @@ import javax.persistence.*;
 @DiscriminatorValue(value = "PayableEntity")
 @EqualsAndHashCode
 @ToString
-@Builder
 @NoArgsConstructor
-@AllArgsConstructor(access = AccessLevel.PACKAGE)
 public class PayableEntity {
     @Id
     @Getter

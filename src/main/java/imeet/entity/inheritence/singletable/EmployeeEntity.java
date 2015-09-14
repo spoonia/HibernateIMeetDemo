@@ -7,11 +7,10 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity(name = "PayableEmployeeEntity")
-@DiscriminatorValue(value = "EmployeeEntity")
-@EqualsAndHashCode
-@ToString
+@DiscriminatorValue(value = "PayableEmployeeEntity")
+@EqualsAndHashCode(of = {"id"})
+@ToString(callSuper = true)
 @NoArgsConstructor
-@AllArgsConstructor(access = AccessLevel.PACKAGE)
 public class EmployeeEntity extends PayableEntity {
     @Column
     @Getter

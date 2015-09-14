@@ -8,10 +8,9 @@ import javax.persistence.Entity;
 
 @Entity
 @DiscriminatorValue(value = "InvoiceEntity")
-@EqualsAndHashCode
-@ToString
+@EqualsAndHashCode(of = {"id"})
+@ToString(callSuper = true)
 @NoArgsConstructor
-@AllArgsConstructor(access = AccessLevel.PACKAGE)
 public class InvoiceEntity extends PayableEntity {
     @Column
     @Getter

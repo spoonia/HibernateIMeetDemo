@@ -6,10 +6,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
-@EqualsAndHashCode
-@ToString
+@EqualsAndHashCode(of = {"id"})
+@ToString(callSuper = true)
 @NoArgsConstructor
-@AllArgsConstructor(access = AccessLevel.PACKAGE)
 public class HourlyEmployeeEntity extends EmployeeEntity {
     @Column
     @Getter
