@@ -1,4 +1,4 @@
-package imeet.entity.inheritence.singletable;
+package imeet.inheritence.entity;
 
 import lombok.*;
 
