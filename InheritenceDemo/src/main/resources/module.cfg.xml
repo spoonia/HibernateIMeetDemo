@@ -12,6 +12,8 @@
         <mapping class="imeet.inheritence.entity.HourlyEmployeeEntity"/>
         <mapping class="imeet.inheritence.entity.SalariedEmployeeEntity"/>
 
+        <mapping class="imeet.superclass.entity.Child"/>
+
     </session-factory>
 
 </hibernate-configuration>
