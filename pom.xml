@@ -14,6 +14,8 @@
         <module>InheritenceDemo</module>
         <module>MappingsDemo</module>
         <module>PrimaryKeyDemo</module>
+        <module>OneToOneRelationshipsModule</module>
+        <module>OneToManyRelationshipsModule</module>
     </modules>
 
     <properties>
@@ -22,6 +24,9 @@
         <mysql.version>5.1.14</mysql.version>
         <log4j.version>1.2.17</log4j.version>
         <lombok.version>1.16.6</lombok.version>
+        <sourceJVM>1.7</sourceJVM>
+        <targetJVM>1.7</targetJVM>
+        <mavenCompiler>3.3</mavenCompiler>
         <exec.maven.plugin.version>1.4.0</exec.maven.plugin.version>
     </properties>
 
@@ -57,6 +62,15 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${mavenCompiler}</version>
+                <configuration>
+                    <source>${sourceJVM}</source>
+                    <target>${targetJVM}</target>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>

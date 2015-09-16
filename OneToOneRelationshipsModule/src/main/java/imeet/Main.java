@@ -1,6 +1,7 @@
 package imeet;
 
-import imeet.entity.EmployeeEntity;
+import imeet.entity.PassportEntity;
+import imeet.entity.PersonEntity;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -13,13 +14,11 @@ public class Main extends Application {
         try {
             transaction.begin();
 
-            EmployeeEntity entity = EmployeeEntity.builder()
-                    .name("Sandeep Poonia")
-                    .email("sandeep.poonia@tothenew.com")
-                    .employeeStatus(EmployeeStatus.FULL_TIME)
-                    .flag(false).build();
+            PersonEntity personEntity = new PersonEntity("Sandeep Poonia");
+            PassportEntity passportEntity = new PassportEntity(4582904378574l, personEntity);
 
-            session.save(entity);
+//            session.save(personEntity);
+            session.save(passportEntity);
 
             transaction.commit();
         } catch (Exception e) {

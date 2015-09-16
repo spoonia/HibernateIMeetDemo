@@ -6,13 +6,7 @@ import org.hibernate.Transaction;
 
 public class Main extends Application {
 
-    public static void main(final String[] args) throws Exception {
-        createNewPayableEntities();
-
-        queryAllTables();
-    }
-
-    private static void createNewPayableEntities() {
+    public static void createData() {
         final Session session = getSession();
         Transaction transaction = session.getTransaction();
 

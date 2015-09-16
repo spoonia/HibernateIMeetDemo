@@ -1,4 +1,8 @@
 package imeet;
 
-public class Main extends Application{
+public class Main extends Application {
+
+    public static void createData() {
+
+    }
 }
