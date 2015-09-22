@@ -77,7 +77,7 @@ public class Application {
         }
     }
 
-    private static void listEntityData(Session session, String entityName) {
+    protected static void listEntityData(Session session, String entityName) {
         final Query query = session.createQuery("from " + entityName);
         System.out.println("\n++++++++++++++++++++++++++++++++++++++  executing: " + query.getQueryString());
         for (Object o : query.list()) {
