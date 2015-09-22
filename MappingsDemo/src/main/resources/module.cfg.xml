@@ -6,7 +6,7 @@
 
     <session-factory>
 
-        <mapping class="imeet.entity.EmployeeEntity"/>
+        <mapping class="intellimeet.hibernate.entity.Employee"/>
 
     </session-factory>
 

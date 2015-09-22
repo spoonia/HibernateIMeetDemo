@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>imeet</groupId>
-    <artifactId>HibernateIMeetDemo</artifactId>
+    <groupId>intellimeet</groupId>
+    <artifactId>HibernateIntellimeetDemo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -19,7 +19,7 @@
     </modules>
 
     <properties>
-        <project.main.class>imeet.Application</project.main.class>
+        <project.main.class>intellimeet.hibernate.Application</project.main.class>
         <hibernate.version>4.3.11.Final</hibernate.version>
         <mysql.version>5.1.14</mysql.version>
         <log4j.version>1.2.17</log4j.version>

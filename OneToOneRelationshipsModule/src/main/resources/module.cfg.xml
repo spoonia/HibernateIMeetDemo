@@ -6,8 +6,8 @@
 
     <session-factory>
 
-        <mapping class="imeet.entity.PassportEntity"/>
-        <mapping class="imeet.entity.PersonEntity"/>
+        <mapping class="intellimeet.hibernate.entity.Passport"/>
+        <mapping class="intellimeet.hibernate.entity.Employee"/>
 
     </session-factory>
 

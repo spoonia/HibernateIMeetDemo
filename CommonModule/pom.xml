@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>imeet</groupId>
-        <artifactId>HibernateIMeetDemo</artifactId>
+        <groupId>intellimeet</groupId>
+        <artifactId>HibernateIntellimeetDemo</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
@@ -14,6 +14,6 @@
     <packaging>jar</packaging>
 
     <properties>
-        <project.main.class>imeet.Main</project.main.class>
+        <project.main.class>intellimeet.hibernate.Main</project.main.class>
     </properties>
 </project>

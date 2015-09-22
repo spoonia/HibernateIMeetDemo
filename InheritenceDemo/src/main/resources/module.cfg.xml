@@ -6,13 +6,13 @@
 
     <session-factory>
 
-        <mapping class="imeet.inheritence.entity.PayableEntity"/>
-        <mapping class="imeet.inheritence.entity.EmployeeEntity"/>
-        <mapping class="imeet.inheritence.entity.InvoiceEntity"/>
-        <mapping class="imeet.inheritence.entity.HourlyEmployeeEntity"/>
-        <mapping class="imeet.inheritence.entity.SalariedEmployeeEntity"/>
+        <mapping class="intellimeet.hibernate.inheritence.entity.Payable"/>
+        <mapping class="intellimeet.hibernate.inheritence.entity.Employee"/>
+        <mapping class="intellimeet.hibernate.inheritence.entity.Invoice"/>
+        <mapping class="intellimeet.hibernate.inheritence.entity.HourlyEmployee"/>
+        <mapping class="intellimeet.hibernate.inheritence.entity.SalariedEmployee"/>
 
-        <mapping class="imeet.superclass.entity.Child"/>
+        <mapping class="intellimeet.hibernate.superclass.entity.Child"/>
 
     </session-factory>
 
