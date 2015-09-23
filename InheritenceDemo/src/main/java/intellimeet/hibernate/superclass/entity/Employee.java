@@ -1,6 +1,6 @@
 package intellimeet.hibernate.superclass.entity;
 
-import intellimeet.hibernate.superclass.Parent;
+import intellimeet.hibernate.superclass.Payable;
 import lombok.*;
 
 import javax.persistence.*;
@@ -9,10 +9,15 @@ import javax.persistence.*;
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 @NoArgsConstructor
-public class Child extends Parent {
+public class Employee extends Payable {
 
+    @Column
     @Getter
     @Setter
-    @Column(length = 50, nullable = false)
-    private String name;
+    private String firstName;
+
+    @Column
+    @Getter
+    @Setter
+    private String lastName;
 }

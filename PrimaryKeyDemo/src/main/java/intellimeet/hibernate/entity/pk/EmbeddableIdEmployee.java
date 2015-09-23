@@ -1,11 +1,11 @@
 package intellimeet.hibernate.entity.pk;
 
-import intellimeet.hibernate.EmbeddableISBN;
+import intellimeet.hibernate.EmbeddableEmployeeDetails;
 import lombok.*;
 
 import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 
 @Entity
 @EqualsAndHashCode
@@ -13,11 +13,11 @@ import javax.persistence.Id;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PACKAGE)
-public class Embeddable {
-    @Id
+public class EmbeddableIdEmployee {
+    @EmbeddedId
     @Getter
     @Setter
-    EmbeddableISBN id;
+    EmbeddableEmployeeDetails id;
 
     @Column
     @Getter

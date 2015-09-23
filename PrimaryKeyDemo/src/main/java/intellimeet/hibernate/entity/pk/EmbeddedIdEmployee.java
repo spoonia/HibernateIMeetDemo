@@ -1,23 +1,31 @@
 package intellimeet.hibernate.entity.pk;
 
-import intellimeet.hibernate.ISBN;
+import intellimeet.hibernate.EmployeeDetails;
 import lombok.*;
 
 import javax.persistence.Column;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
 
 @Entity
+@IdClass(value = EmployeeDetails.class)
+
 @EqualsAndHashCode
 @ToString
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PACKAGE)
-public class EmbeddableId {
-    @EmbeddedId
+public class EmbeddedIdEmployee {
+    @Id
     @Getter
     @Setter
-    ISBN id;
+    Integer code;
+
+    @Id
+    @Getter
+    @Setter
+    String email;
 
     @Column
     @Getter

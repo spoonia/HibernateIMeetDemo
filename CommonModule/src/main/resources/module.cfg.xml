@@ -6,9 +6,6 @@
 
     <session-factory>
 
-        <mapping class="intellimeet.hibernate.entity.pk.EmbeddableEmployee"/>
-        <mapping class="intellimeet.hibernate.entity.pk.EmbeddableIdEmployee"/>
-        <mapping class="intellimeet.hibernate.entity.pk.EmbeddedIdEmployee"/>
 
     </session-factory>
 

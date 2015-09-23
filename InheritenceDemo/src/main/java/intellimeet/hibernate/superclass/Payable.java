@@ -6,16 +6,15 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @MappedSuperclass
-public class Parent {
+public class Payable {
     @Id
     @Getter
     @Setter
     @GeneratedValue(strategy = GenerationType.AUTO)
-    protected Long id;
+    private Long id;
 
+    @Column
     @Getter
     @Setter
-    @Version
-    @Column(nullable = false)
-    protected Integer version;
+    private Double amount;
 }
