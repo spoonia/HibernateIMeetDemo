@@ -17,7 +17,7 @@ public class Main extends Application {
             Employee employeeEntity = new Employee("Sandeep Poonia");
             Passport passportEntity = new Passport(4582904378574l, employeeEntity);
 
-//            session.save(personEntity);
+//            session.save(employeeEntity);
             session.save(passportEntity);
 
             transaction.commit();

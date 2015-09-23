@@ -16,6 +16,7 @@
         <module>PrimaryKeyDemo</module>
         <module>OneToOneRelationshipsModule</module>
         <module>OneToManyRelationshipsModule</module>
+        <module>StoredProcedureModule</module>
     </modules>
 
     <properties>
@@ -58,6 +59,13 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
         </dependency>
+
+        <!--JPA 2.0 metamodel-->
+        <!--<dependency>-->
+            <!--<groupId>org.hibernate</groupId>-->
+            <!--<artifactId>hibernate-jpamodelgen</artifactId>-->
+            <!--<version>${hibernate.version}</version>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>
