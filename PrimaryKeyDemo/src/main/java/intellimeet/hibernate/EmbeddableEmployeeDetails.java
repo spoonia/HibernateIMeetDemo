@@ -7,14 +7,9 @@ import java.io.Serializable;
 
 @Embeddable
 @EqualsAndHashCode
-@ToString
 @NoArgsConstructor
 public class EmbeddableEmployeeDetails implements Serializable {
-    @Getter
-    @Setter
-    Integer code;
+    private Integer code;
 
-    @Getter
-    @Setter
-    String email;
+    private String email;
 }

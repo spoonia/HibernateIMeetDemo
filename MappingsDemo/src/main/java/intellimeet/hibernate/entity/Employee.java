@@ -26,16 +26,24 @@ public class Employee {
     @Setter
     private Long Version;
 
+    @Getter
+    @Setter
     @Column(nullable = false, length = 100)
     private String name;
 
+    @Getter
+    @Setter
     @Column(unique = true, nullable = false)
     private String email;
 
+    @Getter
+    @Setter
     @Enumerated(value = EnumType.STRING)
     @Column(nullable = false)
     private EmployeeStatus employeeStatus;
 
+    @Getter
+    @Setter
     @Transient
     private Boolean flag;
 }

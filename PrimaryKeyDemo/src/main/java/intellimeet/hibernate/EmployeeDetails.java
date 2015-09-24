@@ -5,14 +5,8 @@ import lombok.*;
 import java.io.Serializable;
 
 @EqualsAndHashCode
-@ToString
-@NoArgsConstructor
 public class EmployeeDetails implements Serializable {
-    @Getter
-    @Setter
-    Integer code;
+    private Integer code;
 
-    @Getter
-    @Setter
-    String email;
+    private String email;
 }

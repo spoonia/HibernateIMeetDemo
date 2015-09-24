@@ -1,34 +1,23 @@
 package intellimeet.hibernate.entity.pk;
 
 import intellimeet.hibernate.EmployeeDetails;
-import lombok.*;
+import intellimeet.hibernate.enums.EmployeeStatus;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.IdClass;
+import javax.persistence.*;
 
 @Entity
 @IdClass(value = EmployeeDetails.class)
 
-@EqualsAndHashCode
-@ToString
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor(access = AccessLevel.PACKAGE)
 public class EmbeddedIdEmployee {
     @Id
-    @Getter
-    @Setter
-    Integer code;
+    private Integer code;
 
     @Id
-    @Getter
-    @Setter
-    String email;
+    private String email;
 
     @Column
-    @Getter
-    @Setter
-    String name;
+    private String name;
+
+    @Column
+    private EmployeeStatus employeeStatus;
 }
