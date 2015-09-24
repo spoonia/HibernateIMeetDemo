@@ -14,9 +14,11 @@
         <module>InheritenceDemo</module>
         <module>MappingsDemo</module>
         <module>PrimaryKeyDemo</module>
-        <module>OneToOneRelationshipsModule</module>
-        <module>OneToManyRelationshipsModule</module>
-        <module>StoredProcedureModule</module>
+        <module>OneToOneRelationshipsDemo</module>
+        <module>OneToManyRelationshipsDemo</module>
+        <module>StoredProcedureDemo</module>
+        <module>HQLDemo</module>
+        <module>NoSQLDemo</module>
     </modules>
 
     <properties>

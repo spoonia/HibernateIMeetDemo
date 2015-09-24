@@ -1,6 +1,7 @@
 package intellimeet.hibernate;
 
 import intellimeet.hibernate.entity.Employee;
+import intellimeet.hibernate.enums.EmployeeStatus;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 

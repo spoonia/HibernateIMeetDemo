@@ -1,6 +1,6 @@
 package intellimeet.hibernate.entity;
 
-import intellimeet.hibernate.EmployeeStatus;
+import intellimeet.hibernate.enums.EmployeeStatus;
 import lombok.*;
 
 import javax.persistence.*;
