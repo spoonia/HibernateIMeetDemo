@@ -1,5 +1,6 @@
 package intellimeet.hibernate.superclass.entity;
 
+import intellimeet.hibernate.enums.EmployeeStatus;
 import intellimeet.hibernate.superclass.Payable;
 import lombok.*;
 
@@ -20,4 +21,10 @@ public class Employee extends Payable {
     @Getter
     @Setter
     private String lastName;
+
+    @Getter
+    @Setter
+    @Enumerated(value = EnumType.STRING)
+    @Column(nullable = false)
+    private EmployeeStatus employeeStatus;
 }

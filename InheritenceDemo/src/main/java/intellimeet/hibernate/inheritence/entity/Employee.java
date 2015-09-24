@@ -1,10 +1,9 @@
 package intellimeet.hibernate.inheritence.entity;
 
+import intellimeet.hibernate.enums.EmployeeStatus;
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity(name = "PayableEmployeeEntity")
 @DiscriminatorValue(value = "PayableEmployeeEntity")
@@ -21,4 +20,10 @@ public class Employee extends Payable {
     @Getter
     @Setter
     private String lastName;
+
+    @Enumerated(value = EnumType.STRING)
+    @Column
+    @Getter
+    @Setter
+    private EmployeeStatus employeeStatus;
 }
