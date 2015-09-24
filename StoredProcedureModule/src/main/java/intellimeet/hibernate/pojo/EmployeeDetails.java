@@ -1,4 +1,4 @@
-package intellimeet.hibernate.proc;
+package intellimeet.hibernate.pojo;
 
 import java.math.BigInteger;
 

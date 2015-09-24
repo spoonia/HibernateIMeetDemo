@@ -2,7 +2,7 @@ package intellimeet.hibernate;
 
 import intellimeet.hibernate.entity.Employee;
 import intellimeet.hibernate.entity.Passport;
-import intellimeet.hibernate.proc.EmployeeDetails;
+import intellimeet.hibernate.pojo.EmployeeDetails;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -51,11 +51,12 @@ public class Main extends Application {
         try {
             session.beginTransaction();
 
-//            session.doWork(new Work() {
+//            session.doWork(new org.hibernate.jdbc.Work() {
 //                @Override
-//                public void execute(Connection connection) throws SQLException {
+//                public void execute(java.sql.Connection connection) throws java.sql.SQLException {
 //                    System.out.println("================================================");
 //                    System.out.println(connection.getMetaData().getURL().split("/")[3].split("\\?")[0]);
+//                    connection.prepareCall("").executeQuery();
 //                }
 //            });
 
