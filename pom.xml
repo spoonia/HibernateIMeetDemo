@@ -17,7 +17,6 @@
         <module>OneToOneRelationshipsDemo</module>
         <module>OneToManyRelationshipsDemo</module>
         <module>StoredProcedureDemo</module>
-        <module>HQLDemo</module>
         <module>NoSQLDemo</module>
     </modules>
 
