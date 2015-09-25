@@ -30,6 +30,10 @@ public class Address {
     public Address() {
     }
 
+    public Address(Employee person) {
+        this.person = person;
+    }
+
     public Address(String address, String city, String state, Long pinCode) {
         this.address = address;
         this.city = city;

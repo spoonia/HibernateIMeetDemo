@@ -50,7 +50,7 @@ public class Application {
             try {
                 aClass.getMethod("createData").invoke(aClass);
             } catch (NoSuchMethodException | InvocationTargetException ex) {
-                System.err.println("Could not invoke method: " + ex.getLocalizedMessage());
+                System.err.println("Could not invoke method: " + ex);
             }
         }
         queryAllTables();
