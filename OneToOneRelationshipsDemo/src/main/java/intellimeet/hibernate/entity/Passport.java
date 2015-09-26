@@ -1,10 +1,6 @@
 package intellimeet.hibernate.entity;
 
-import org.hibernate.annotations.*;
-import org.hibernate.annotations.CascadeType;
-
 import javax.persistence.*;
-import javax.persistence.Entity;
 
 @Entity
 public class Passport {
@@ -19,7 +15,6 @@ public class Passport {
     private Long passportNumber;
 
     @OneToOne
-    @Cascade(value = CascadeType.ALL)
     private Employee person;
 
     public Passport() {

@@ -1,6 +1,7 @@
 package intellimeet.hibernate.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -15,7 +16,7 @@ public class Employee {
     @Basic(optional = false)
     private String name;
 
-    @OneToMany(orphanRemoval = true, mappedBy = "person", fetch = FetchType.LAZY)
+    @OneToMany(orphanRemoval = true, mappedBy = "person", cascade = CascadeType.ALL)
     private List<Address> addresses;
 
     public Employee() {
@@ -60,6 +61,13 @@ public class Employee {
 
     public void setAddresses(List<Address> addresses) {
         this.addresses = addresses;
+    }
+
+    public void addAddress(Address address) {
+        if (this.addresses == null) {
+            this.addresses = new ArrayList<Address>();
+        }
+        this.addresses.add(address);
     }
 
     @Override

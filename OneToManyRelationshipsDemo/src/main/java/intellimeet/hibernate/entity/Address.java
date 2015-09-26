@@ -1,8 +1,5 @@
 package intellimeet.hibernate.entity;
 
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
-
 import javax.persistence.*;
 
 @Entity
@@ -23,8 +20,7 @@ public class Address {
     @Basic(optional = false)
     private Long pinCode;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @Cascade(value = {CascadeType.PERSIST, CascadeType.SAVE_UPDATE})
+    @ManyToOne
     private Employee person;
 
     public Address() {

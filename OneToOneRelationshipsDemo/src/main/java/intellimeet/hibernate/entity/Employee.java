@@ -14,8 +14,7 @@ public class Employee {
     @Basic(optional = false)
     private String name;
 
-//    @OneToOne
-    @OneToOne(mappedBy = "person")
+    @OneToOne(mappedBy = "person", cascade = CascadeType.ALL)
     private Passport passport;
 
     public Employee() {

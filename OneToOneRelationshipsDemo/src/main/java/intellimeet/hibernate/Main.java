@@ -14,11 +14,11 @@ public class Main extends Application {
         try {
             transaction.begin();
 
-            Employee employeeEntity = new Employee("Sandeep Poonia");
-            Passport passportEntity = new Passport(4582904378574l, employeeEntity);
+            Employee employee = new Employee("Sandeep Poonia");
+            employee.setPassport(new Passport(4582904378574l, employee));
 
-//            session.save(employeeEntity);
-            session.save(passportEntity);
+            session.save(employee);
+//            session.save(passportEntity);
 
             transaction.commit();
         } catch (Exception e) {

@@ -23,15 +23,12 @@ public class Main extends Application {
 
         try {
             transaction.begin();
-            Address addressEntity = null;
 
-            Employee employeeEntity = new Employee("Sandeep Poonia");
+            Employee employee = new Employee("Sandeep Poonia");
+            employee.addAddress(new Address("Noida", "GTBNagar", "UP", 201301l, employee));
+            employee.addAddress(new Address("Ashok Nagar", "Delhi", "Delhi", 110011l, employee));
 
-            addressEntity = new Address("Noida", "GTBNagar", "UP", 201301l, employeeEntity);
-            session.save(addressEntity);
-
-            addressEntity = new Address("Ashok Nagar", "Delhi", "Delhi", 110011l, employeeEntity);
-            session.save(addressEntity);
+            session.persist(employee);
 
             transaction.commit();
         } catch (Exception e) {
@@ -65,7 +62,9 @@ public class Main extends Application {
                 address.setState(states.get(random.nextInt(0, 10)));
                 address.setPinCode(pinCodes.get(random.nextInt(0, 10)));
 
-                session.save(address);
+                employee.addAddress(address);
+
+                session.save(employee);
             }
 
             transaction.commit();
