@@ -2,8 +2,12 @@ package intellimeet.hibernate;
 
 import intellimeet.hibernate.entity.Address;
 import intellimeet.hibernate.entity.Employee;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.ProjectionList;
+import org.hibernate.criterion.Projections;
+import org.hibernate.sql.JoinType;
 
 import java.util.Arrays;
 import java.util.List;
@@ -38,6 +42,27 @@ public class Main extends Application {
             session.close();
         }
 
+        try {
+            session = getSession();
+
+            Criteria criteria = session.createCriteria(Employee.class);
+
+            ProjectionList properties = Projections.projectionList();
+            properties.add(Projections.property("id"), "id");
+            properties.add(Projections.property("name"), "name");
+            properties.add(Projections.property("addresses.id"), "id");
+            properties.add(Projections.property("addresses.city"), "city");
+
+            criteria.setProjection(properties);
+            criteria.createAlias("addresses",  "addresses", JoinType.INNER_JOIN);
+
+            criteria.setMaxResults(1);
+            System.out.println(criteria.uniqueResult());
+
+            session.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 //        createBulkData();
     }
 
