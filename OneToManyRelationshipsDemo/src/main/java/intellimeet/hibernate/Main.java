@@ -42,6 +42,8 @@ public class Main extends Application {
             session.close();
         }
 
+        createBulkData();
+
         try {
             session = getSession();
 
@@ -50,20 +52,22 @@ public class Main extends Application {
             ProjectionList properties = Projections.projectionList();
             properties.add(Projections.property("id"), "id");
             properties.add(Projections.property("name"), "name");
-            properties.add(Projections.property("addresses.id"), "id");
-            properties.add(Projections.property("addresses.city"), "city");
+            properties.add(Projections.property("addr.id"), "id");
+            properties.add(Projections.property("addr.city"), "city");
 
             criteria.setProjection(properties);
-            criteria.createAlias("addresses",  "addresses", JoinType.INNER_JOIN);
+            criteria.createAlias("addresses",  "addr", JoinType.INNER_JOIN);
 
             criteria.setMaxResults(1);
-            System.out.println(criteria.uniqueResult());
+            for(Object obj: ((Object[])criteria.uniqueResult())){
+                System.out.println(obj);
+            }
 
             session.close();
         }catch (Exception e){
             e.printStackTrace();
         }
-//        createBulkData();
+//        System.exit(1);
     }
 
     private static void createBulkData() {
